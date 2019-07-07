@@ -1,5 +1,4 @@
-	
-	<?php get_template_part( 'parts/footer' ); ?>
+
 	
 	<?php get_template_part( 'parts/modal' ); ?>
 

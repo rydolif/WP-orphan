@@ -54,7 +54,6 @@ var youtube = $('.youtube');
   });
 
   var swiper = new Swiper('.sos__slider', {
-    loop: true,
     spaceBetween: 30,
     navigation: {
       nextEl: '.sos__next',

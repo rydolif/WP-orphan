@@ -6,6 +6,8 @@
 
 <?php get_header(); ?>
 
+	<?php get_template_part( 'parts/nav' ); ?>
+
 	<main class="main">
 
 		<section class="hero" id="hero">
@@ -25,8 +27,8 @@
 					</div>
 
 					<div class="hero__soc">
-						<a href="#" target="_blank">Facebook</a>
-						<a href="#" target="_blank">Instagram</a>
+						<a href="<?php the_field('fb', 'option'); ?>" target="_blank">Facebook</a>
+						<a href="<?php the_field('in', 'option'); ?>" target="_blank">Instagram</a>
 					</div>
 
 					<div class="hero__more more">
@@ -122,55 +124,30 @@
 				<div class="history__slider swiper-container">
 					<div class="swiper-wrapper">
 
-						<div class="history__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/history1.jpg" alt="">
-							<div class="history__slider_content">
-								<h3>Саша<br> Дмитрук</h3>
-								<p>2 роки в програмі. Член нашої команди з допомоги підліткам-сиротам. </p>
+						<?php
+							$args = array(
+							'post_type' => 'history',
+							'posts_per_page' => -1,
+							);
+
+							$query = new WP_Query( $args );
+
+							while ( $query->have_posts() ): $query->the_post();
+
+						?>
+
+							<div class="history__slider_slide swiper-slide">
+								<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+								<div class="history__slider_content">
+									<h3><?php the_title(); ?></h3>
+									<?php the_content(); ?>
+								</div>
 							</div>
-						</div>
-						<div class="history__slider_slide  swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/history5.jpg" alt="">
-							<div class="history__slider_content">
-								<h3>Саша<br> Дмитрук</h3>
-								<p>2 роки в програмі. Член нашої команди з допомоги підліткам-сиротам. </p>
-							</div>
-						</div>
-						<div class="history__slider_slide  swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/history3.jpg" alt="">
-							<div class="history__slider_content">
-								<h3>Саша<br> Дмитрук</h3>
-								<p>2 роки в програмі. Член нашої команди з допомоги підліткам-сиротам. </p>
-							</div>
-						</div>
-						<div class="history__slider_slide  swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/history4.jpg" alt="">
-							<div class="history__slider_content">
-								<h3>Саша<br> Дмитрук</h3>
-								<p>2 роки в програмі. Член нашої команди з допомоги підліткам-сиротам. </p>
-							</div>
-						</div>
-						<div class="history__slider_slide  swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/history5.jpg" alt="">
-							<div class="history__slider_content">
-								<h3>Саша<br> Дмитрук</h3>
-								<p>2 роки в програмі. Член нашої команди з допомоги підліткам-сиротам. </p>
-							</div>
-						</div>
-						<div class="history__slider_slide  swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/history1.jpg" alt="">
-							<div class="history__slider_content">
-								<h3>Саша<br> Дмитрук</h3>
-								<p>2 роки в програмі. Член нашої команди з допомоги підліткам-сиротам. </p>
-							</div>
-						</div>
-						<div class="history__slider_slide  swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/history3.jpg" alt="">
-							<div class="history__slider_content">
-								<h3>Саша<br> Дмитрук</h3>
-								<p>2 роки в програмі. Член нашої команди з допомоги підліткам-сиротам. </p>
-							</div>
-						</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
+
 					</div>
 				</div>
 
@@ -201,113 +178,73 @@
 				<div class="sos__slider swiper-container">
 					<div class="swiper-wrapper">
 
-						<div class="sos__slider_slide swiper-slide">
-							<div class="sos__content">
-								<h3><span>ДОПОМОГА ОДНОМУ –</span> ДОПОМОГА ВСІМ</h3>
-								<div class="sos__content_text">
-									<p>
-										Інтернат села Новоайдар Луганської області. Близько 280 дітей. Військові дії. Вони заслуговують на відпочинок та реабілітацію, чи не так? Діти мріють про табір і чекають на нього понад усе.
-									</p>
-									<p>
-										Ми проводили табори для сиріт у різних куточках країни. Це (название города- ссылка), (название города-ссылка) , (название города-ссылка). Цього разу ми плануємо допомогти дітям з Новоайдара. Ми підготували освітньо-розважальну програму та команду фахівців, яка займатиметься з дітьми.
-									</p>
-									<p>
-										Інтернат села Новоайдар Луганської області. Близько 280 дітей. Військові дії. Вони заслуговують на відпочинок та реабілітацію, чи не так? Діти мріють про табір і чекають на нього понад усе.
-									</p>
-									<p>
-										Ми проводили табори для сиріт у різних куточках країни. Це (название города- ссылка), (название города-ссылка) , (название города-ссылка). Цього разу ми плануємо допомогти дітям з Новоайдара. Ми підготували освітньо-розважальну програму та команду фахівців, яка займатиметься з дітьми.
-									</p>
-									<p>
-										Для проведення такого табору потрібно  19 090 грн.
-									</p>
-									<p>
-										Наразі коштів катастрофічно бракує. Тому ми будемо вдячні кожному, хто захоче долучитися до такої потрібної справи.  Ми раді навіть найменшій допомозі. Для когось – це не випити філіжанку ранкової кави, а для дитини 
-									</p>
-								</div>
-								<p><b>Реквізити ХХХХ ХХХХ ХХХХ ХХХХ</b> </p>
-								<p>Цінуємо кожного!</p>
-								<a href="#" class="btn">Вартість проекту</a>
-							</div>
-							<div class="sos__info">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/sos1.jpg" alt="">
-								<div class="sos__info_text">
-									<b class="sos__info_accent">зібрано</b>
-									<b class="sos__info_red">залишилось зібрати</b>
-								</div>
-							</div>
-						</div>
+						<?php
+							$args = array(
+							'post_type' => 'sos',
+							'posts_per_page' => -1,
+							);
 
-						<div class="sos__slider_slide swiper-slide">
-							<div class="sos__content">
-								<h3><span>ДОПОМОГА ОДНОМУ –</span> ДОПОМОГА ВСІМ</h3>
-								<div class="sos__content_text">
-									<p>
-										Інтернат села Новоайдар Луганської області. Близько 280 дітей. Військові дії. Вони заслуговують на відпочинок та реабілітацію, чи не так? Діти мріють про табір і чекають на нього понад усе.
-									</p>
-									<p>
-										Ми проводили табори для сиріт у різних куточках країни. Це (название города- ссылка), (название города-ссылка) , (название города-ссылка). Цього разу ми плануємо допомогти дітям з Новоайдара. Ми підготували освітньо-розважальну програму та команду фахівців, яка займатиметься з дітьми.
-									</p>
-									<p>
-										Інтернат села Новоайдар Луганської області. Близько 280 дітей. Військові дії. Вони заслуговують на відпочинок та реабілітацію, чи не так? Діти мріють про табір і чекають на нього понад усе.
-									</p>
-									<p>
-										Ми проводили табори для сиріт у різних куточках країни. Це (название города- ссылка), (название города-ссылка) , (название города-ссылка). Цього разу ми плануємо допомогти дітям з Новоайдара. Ми підготували освітньо-розважальну програму та команду фахівців, яка займатиметься з дітьми.
-									</p>
-									<p>
-										Для проведення такого табору потрібно  19 090 грн.
-									</p>
-									<p>
-										Наразі коштів катастрофічно бракує. Тому ми будемо вдячні кожному, хто захоче долучитися до такої потрібної справи.  Ми раді навіть найменшій допомозі. Для когось – це не випити філіжанку ранкової кави, а для дитини 
-									</p>
-								</div>
-								<p><b>Реквізити ХХХХ ХХХХ ХХХХ ХХХХ</b> </p>
-								<p>Цінуємо кожного!</p>
-								<a href="#" class="btn">Вартість проекту</a>
-							</div>
-							<div class="sos__info">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/sos1.jpg" alt="">
-								<div class="sos__info_text">
-									<b class="sos__info_accent">зібрано</b>
-									<b class="sos__info_red">залишилось зібрати</b>
-								</div>
-							</div>
-						</div>
+							$query = new WP_Query( $args );
 
-						<div class="sos__slider_slide swiper-slide">
-							<div class="sos__content">
-								<h3><span>ДОПОМОГА ОДНОМУ –</span> ДОПОМОГА ВСІМ</h3>
-								<div class="sos__content_text">
-									<p>
-										Інтернат села Новоайдар Луганської області. Близько 280 дітей. Військові дії. Вони заслуговують на відпочинок та реабілітацію, чи не так? Діти мріють про табір і чекають на нього понад усе.
-									</p>
-									<p>
-										Ми проводили табори для сиріт у різних куточках країни. Це (название города- ссылка), (название города-ссылка) , (название города-ссылка). Цього разу ми плануємо допомогти дітям з Новоайдара. Ми підготували освітньо-розважальну програму та команду фахівців, яка займатиметься з дітьми.
-									</p>
-									<p>
-										Інтернат села Новоайдар Луганської області. Близько 280 дітей. Військові дії. Вони заслуговують на відпочинок та реабілітацію, чи не так? Діти мріють про табір і чекають на нього понад усе.
-									</p>
-									<p>
-										Ми проводили табори для сиріт у різних куточках країни. Це (название города- ссылка), (название города-ссылка) , (название города-ссылка). Цього разу ми плануємо допомогти дітям з Новоайдара. Ми підготували освітньо-розважальну програму та команду фахівців, яка займатиметься з дітьми.
-									</p>
-									<p>
-										Для проведення такого табору потрібно  19 090 грн.
-									</p>
-									<p>
-										Наразі коштів катастрофічно бракує. Тому ми будемо вдячні кожному, хто захоче долучитися до такої потрібної справи.  Ми раді навіть найменшій допомозі. Для когось – це не випити філіжанку ранкової кави, а для дитини 
-									</p>
+							while ( $query->have_posts() ): $query->the_post();
+
+						?>
+							<div class="sos__slider_slide swiper-slide">
+								<div class="sos__content">
+									<h3><?php the_title(); ?></h3>
+									<div class="sos__content_text">
+										<?php the_content(); ?>
+									</div>
+									<p><b>Реквізити <?php the_field('requisite'); ?></b></p>
+									<p>Цінуємо кожного!</p>
+									<a href="#" class="btn <?php the_field('id'); ?>_open">Вартість проекту</a>
 								</div>
-								<p><b>Реквізити ХХХХ ХХХХ ХХХХ ХХХХ</b> </p>
-								<p>Цінуємо кожного!</p>
-								<a href="#" class="btn">Вартість проекту</a>
-							</div>
-							<div class="sos__info">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/sos1.jpg" alt="">
-								<div class="sos__info_text">
-									<b class="sos__info_accent">зібрано</b>
-									<b class="sos__info_red">залишилось зібрати</b>
+								<div class="sos__info">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/sos1.jpg" alt="">
+									<div class="sos__info_text">
+										<b class="sos__info_accent">зібрано</b>
+										<b class="sos__info_red">залишилось зібрати</b>
+									</div>
 								</div>
 							</div>
-						</div>
+
+							<div class="modal" id="<?php the_field('id'); ?>">
+
+								<button class="close <?php the_field('id'); ?>_close" type="button">
+									<span></span>
+									<span></span>
+								</button>
+
+								<h2><b>Вартість</b> <span>проекту</span></h2>
+
+								<table>
+									<?php if( have_rows('list') ): ?>
+										<?php while( have_rows('list') ): the_row(); 
+											$name = get_sub_field('name');
+											$number = get_sub_field('number');
+											$price = get_sub_field('price');
+											?>
+
+											<tr>
+												<th><?php echo $name; ?></th>
+												<td><?php echo $number; ?></td>
+												<td><span><?php echo $price; ?> грн</span></td>
+											</tr>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+								</table>
+
+								<div class="modal__end">
+									<span>Разом:</span>
+									<b><?php the_field('final--price'); ?>грн</b>
+								</div>
+
+							</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
 					</div>
 				</div>
 
@@ -320,90 +257,35 @@
 				<h2><b>Проекти</b> <span>фонду </span></h2>
 
 				<div class="progect__list">
-					<div class="progect__list_col">
-						<div class="progect__item">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/progect2.jpg" alt="">
-							<h3>Програма <br><b>“Наставництво”</b></h3>
-							<div class="progect__item_content">
-								<div class="progect__item_header">
-									<h3>Програма <br><b>“Наставництво”</b></h3>
-									<a href="#">Детальніше</a>
-								</div>
-								<p>
-									Наставництво - це ефективна допомога дітям-сиротам і дітям з інтернатів у їх соціалізації та адаптації до самостійного життя.
-								</p>
-								<p>
-									Наставник та підліток регулярно спілкуються та проводять багато часу разом. Між ними з’являється довіра, взаєморозуміння та дружба. Наставник допомагає підлітку у ...
-								</p>
+
+					<?php
+						$args = array(
+						'post_type' => 'fond',
+						'posts_per_page' => 8,
+						);
+
+						$query = new WP_Query( $args );
+
+						while ( $query->have_posts() ): $query->the_post();
+
+					?>
+
+					<div class="progect__item">
+						<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+						<h3><?php the_title(); ?></h3>
+						<div class="progect__item_content">
+							<div class="progect__item_header">
+								<h3><b><?php the_title(); ?></b></h3>
+								<a href="<?php the_permalink(); ?>">Детальніше</a>
 							</div>
-						</div>
-						<div class="progect__item">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/progect2.jpg" alt="">
-							<h3><b>Back to school</b></h3>
-							<div class="progect__item_content">
-								<div class="progect__item_header">
-									<h3>Програма <br><b>“Наставництво”</b></h3>
-									<a href="#">Детальніше</a>
-								</div>
-								<p>
-									Наставництво - це ефективна допомога дітям-сиротам і дітям з інтернатів у їх соціалізації та адаптації до самостійного життя.
-								</p>
-								<p>
-									Наставник та підліток регулярно спілкуються та проводять багато часу разом. Між ними з’являється довіра, взаєморозуміння та дружба. Наставник допомагає підлітку у ...
-								</p>
-							</div>
+							<?php the_excerpt(); ?>
 						</div>
 					</div>
-					<div class="progect__list_col">
-						<div class="progect__item">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/progect3.jpg" alt="">
-							<h3><b>Різдвяна</b> програма</h3>
-							<div class="progect__item_content">
-								<div class="progect__item_header">
-									<h3>Програма <br><b>“Наставництво”</b></h3>
-									<a href="#">Детальніше</a>
-								</div>
-								<p>
-									Наставництво - це ефективна допомога дітям-сиротам і дітям з інтернатів у їх соціалізації та адаптації до самостійного життя.
-								</p>
-								<p>
-									Наставник та підліток регулярно спілкуються та проводять багато часу разом. Між ними з’являється довіра, взаєморозуміння та дружба. Наставник допомагає підлітку у ...
-								</p>
-							</div>
-						</div>
-						<div class="progect__item">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/progect4.jpg" alt="">
-							<h3><b>Пасха</b> 2020</h3>
-							<div class="progect__item_content">
-								<div class="progect__item_header">
-									<h3>Програма <br><b>“Наставництво”</b></h3>
-									<a href="#">Детальніше</a>
-								</div>
-								<p>
-									Наставництво - це ефективна допомога дітям-сиротам і дітям з інтернатів у їх соціалізації та адаптації до самостійного життя.
-								</p>
-								<p>
-									Наставник та підліток регулярно спілкуються та проводять багато часу разом. Між ними з’являється довіра, взаєморозуміння та дружба. Наставник допомагає підлітку у ...
-								</p>
-							</div>
-						</div>
-						<div class="progect__item">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/progect5.jpg" alt="">
-							<h3><b>Education</b> Bus</h3>
-							<div class="progect__item_content">
-								<div class="progect__item_header">
-									<h3>Програма <br><b>“Наставництво”</b></h3>
-									<a href="#">Детальніше</a>
-								</div>
-								<p>
-									Наставництво - це ефективна допомога дітям-сиротам і дітям з інтернатів у їх соціалізації та адаптації до самостійного життя.
-								</p>
-								<p>
-									Наставник та підліток регулярно спілкуються та проводять багато часу разом. Між ними з’являється довіра, взаєморозуміння та дружба. Наставник допомагає підлітку у ...
-								</p>
-							</div>
-						</div>
-					</div>
+
+					<?php
+						endwhile; wp_reset_postdata();
+					?>
+
 				</div>
 
 
@@ -425,42 +307,31 @@
 				<div class="realized__slider swiper-container">
 					<div class="swiper-wrapper">
 
-						<div class="realized__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/realized1.jpg" alt="">
-							<h3>Lorem ipsum dolor</h3>
-							<div class="realized__slider_content">
-								<h3>Lorem ipsum dolor</h3>
-								<p>Табір – це окреме маленьке життя, в межах якого ми намагаємося досягти максимального впливу на дитину. Саме у таборі стають зрозумілими гострі кути кожного: чи то характер, чи то персональні якості, які потребують корегування. У таборі ми виховуємо відповідальність. Крім режиму, який дисциплінує... </p>
-								<a href="#">Детальніше</a>
+						<?php
+							$args = array(
+							'post_type' => 'project',
+							'posts_per_page' => -1,
+							);
+
+							$query = new WP_Query( $args );
+
+							while ( $query->have_posts() ): $query->the_post();
+
+						?>
+
+							<div class="realized__slider_slide swiper-slide">
+								<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+								<h3><?php the_title(); ?> </h3>
+								<div class="realized__slider_content">
+									<h3><?php the_title(); ?> </h3>
+									<?php the_excerpt(); ?> 
+									<a href="<?php the_permalink(); ?>">Детальніше</a>
+								</div>
 							</div>
-						</div>
-						<div class="realized__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/realized1.jpg" alt="">
-							<h3>Lorem ipsum dolor</h3>
-							<div class="realized__slider_content">
-								<h3>Lorem ipsum dolor</h3>
-								<p>Табір – це окреме маленьке життя, в межах якого ми намагаємося досягти максимального впливу на дитину. Саме у таборі стають зрозумілими гострі кути кожного: чи то характер, чи то персональні якості, які потребують корегування. У таборі ми виховуємо відповідальність. Крім режиму, який дисциплінує... </p>
-								<a href="#">Детальніше</a>
-							</div>
-						</div>
-						<div class="realized__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/realized1.jpg" alt="">
-							<h3>Lorem ipsum dolor</h3>
-							<div class="realized__slider_content">
-								<h3>Lorem ipsum dolor</h3>
-								<p>Табір – це окреме маленьке життя, в межах якого ми намагаємося досягти максимального впливу на дитину. Саме у таборі стають зрозумілими гострі кути кожного: чи то характер, чи то персональні якості, які потребують корегування. У таборі ми виховуємо відповідальність. Крім режиму, який дисциплінує... </p>
-								<a href="#">Детальніше</a>
-							</div>
-						</div>
-						<div class="realized__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/realized1.jpg" alt="">
-							<h3>Lorem ipsum dolor</h3>
-							<div class="realized__slider_content">
-								<h3>Lorem ipsum dolor</h3>
-								<p>Табір – це окреме маленьке життя, в межах якого ми намагаємося досягти максимального впливу на дитину. Саме у таборі стають зрозумілими гострі кути кожного: чи то характер, чи то персональні якості, які потребують корегування. У таборі ми виховуємо відповідальність. Крім режиму, який дисциплінує... </p>
-								<a href="#">Детальніше</a>
-							</div>
-						</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
 
 					</div>
 				</div>
@@ -470,7 +341,7 @@
 
 		<section  class="video">
 
-			<div class="youtube" data-embed="VFp8S8ZdU70">
+			<div class="youtube" data-embed="<?php the_field('video'); ?>">
 				<div class="play-button">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/video.png" alt="">
 					<p>не <span>будь</span> Байдужий</p>
@@ -486,34 +357,28 @@
 				<div class="team__slider swiper-container">
 					<div class="swiper-wrapper">
 
-						<div class="team__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/team1.jpg" alt="">
-							<div class="team__slider_content">
-								<h3>Шатохіна <br>Валентина <br>Михайлівна</h3>
-								<p>Співзасновник Фонду Підприємець, практикуючий бізнес -коуч Просування проектів фонду, фандрейзинг</p>
+						<?php
+							$args = array(
+							'post_type' => 'team',
+							'posts_per_page' => -1,
+							);
+
+							$query = new WP_Query( $args );
+
+							while ( $query->have_posts() ): $query->the_post();
+
+						?>
+							<div class="team__slider_slide swiper-slide">
+								<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+								<div class="team__slider_content">
+									<h3><?php the_title(); ?></h3>
+									<?php the_content(); ?> 
+								</div>
 							</div>
-						</div>
-						<div class="team__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/team2.jpg" alt="">
-							<div class="team__slider_content">
-								<h3>Шатохіна <br>Валентина <br>Михайлівна</h3>
-								<p>Співзасновник Фонду Підприємець, практикуючий бізнес -коуч Просування проектів фонду, фандрейзинг</p>
-							</div>
-						</div>
-						<div class="team__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/team3.jpg" alt="">
-							<div class="team__slider_content">
-								<h3>Шатохіна <br>Валентина <br>Михайлівна</h3>
-								<p>Співзасновник Фонду Підприємець, практикуючий бізнес -коуч Просування проектів фонду, фандрейзинг</p>
-							</div>
-						</div>
-						<div class="team__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/team2.jpg" alt="">
-							<div class="team__slider_content">
-								<h3>Шатохіна <br>Валентина <br>Михайлівна</h3>
-								<p>Співзасновник Фонду Підприємець, практикуючий бізнес -коуч Просування проектів фонду, фандрейзинг</p>
-							</div>
-						</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
 
 					</div>
 				</div>
@@ -521,70 +386,12 @@
 			</div>
 		</section>
 
-		<section class="help" id="help">
-			<div class="help__container container">
-				<p><b>допомогти</b> просто!</p>
-				<a href="#" class="btn">Долучитись</a>
-				<div class="help__img help__img--one">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/1--active.jpg" alt="" class="help__active">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mision--one-before.jpg" alt="" class="help__active-no">
-				</div>
-				<div class="help__img help__img--two">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/2--active.jpg" alt="" class="help__active">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mision--before.jpg" alt="" class="help__active-no">
-				</div>
-				<div class="help__img help__img--three">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/3--active.jpg" alt="" class="help__active">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/3.jpg" alt="" class="help__active-no">
-				</div>
-				<div class="help__img help__img--four">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/4--active.jpg" alt="" class="help__active">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/4.jpg" alt="" class="help__active-no">
-				</div>
-			</div>
-		</section>
+		<?php get_template_part( 'parts/help' ); ?>
 
-		<section class="info" id="info">
-			<div class="info__container container">
-
-				<div class="info__col">
-					<a href="#" class="info__logo">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer--logo.png" alt="">
-					</a>
-					<div class="info__soc">
-						<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer--fb.png" alt=""></a>
-						<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer--in.png" alt=""></a>
-					</div>
-				</div>
-
-				<div class="info__col info__form">
-					<h3>Напишіть <span>нам</span></h3>
-					<form action="sendmail.php" class="form" method="post">
-						<input type="text" name="name" placeholder="Ваше ім’я" required>
-						<input type="mail" name="mail" required placeholder="Ваш Email">
-						<textarea name="textarea" placeholder="Ваше повідомлення"></textarea>
-						<button type="submit" class="btn" name="submit">Отправить</button>
-					</form>
-				</div>
-
-				<div class="info__col info__info">
-					<h3>Контакти</h3>
-					<p>м. Київ, вул. Авіаторів 135. оф 11</p>
-					<p>
-						<a href="tel:+380000000000">+380 00 000 00 00</a>
-						<a href="tel:+380000000000">+380 00 000 00 00</a>
-						<a href="tel:+380000000000">+380 00 000 00 00</a>
-					</p>
-					<p>
-						<a href="mailto:adress@gmail.com">adress@gmail.com</a>
-					</p>
-					
-				</div>
-				
-			</div>
-		</section>
+		<?php get_template_part( 'parts/info' ); ?>
 
 	</main>
-
+	
+	<?php get_template_part( 'parts/footer' ); ?>
 
 <?php get_footer(); ?>
