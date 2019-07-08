@@ -36,19 +36,19 @@ gulp.task('styles', function() {
 
 gulp.task('js', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',  			//----jquery
-		// 'app/libs/jquery.validate.js', 					//----форма
-		// 'app/libs/jquery.mask.min.js', 					//----форма
-		'app/libs/jscrollpane/jquery.jscrollpane.js',
-		'app/libs/jscrollpane/jquery.mousewheel.js',
-		'app/libs/jquery.popupoverlay.js', 				//----модалки
-		// 'app/libs/slick/slick.js', 					//----слайдер
-		 // 'app/libs/flipclock/flipclock.js',
-		'app/libs/swiper/swiper.min.js', 			//----слайдер
-		'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
-		// 'app/libs/jquery.spincrement.min.js', 		//----цифри анімованні
-		// 'app/libs/isotope.pkgd.min.js', 				//----сетка елементов + фильтр
-		'app/js/common.js', // Always at the end
+		'orphan/assets/libs/jquery/dist/jquery.min.js',  			//----jquery
+		'orphan/assets/libs/jquery.validate.js', 					//----форма
+		'orphan/assets/libs/jquery.mask.min.js', 					//----форма
+		'orphan/assets/libs/jscrollpane/jquery.jscrollpane.js',
+		'orphan/assets/libs/jscrollpane/jquery.mousewheel.js',
+		'orphan/assets/libs/jquery.popupoverlay.js', 				//----модалки
+		// 'orphan/assets/libs/slick/slick.js', 					//----слайдер
+		 // 'orphan/assets/libs/flipclock/flipclock.js',
+		'orphan/assets/libs/swiper/swiper.min.js', 			//----слайдер
+		'orphan/assets/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
+		// 'orphan/assets/libs/jquery.spincrement.min.js', 		//----цифри анімованні
+		// 'orphan/assets/libs/isotope.pkgd.min.js', 				//----сетка елементов + фильтр
+		'orphan/assets/js/common.js', // Always at the end
 	])
 	.pipe(plumber())
 	.pipe(concat('scripts.min.js'))

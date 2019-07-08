@@ -19,7 +19,7 @@
 					<div class="hero__block">
 						<div>
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="" class="hero__logo">
-							<a class="hero__play" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+							<a class="hero__play" data-fancybox href="<?php the_field('modal-video'); ?>">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png" alt="">
 							</a>
 						</div>
@@ -152,7 +152,7 @@
 				</div>
 
 				<div class="history__btn">
-					<a href="#" class="btn">Фондувати</a>
+					<a href="<?php echo get_home_url(); ?>/platizhka/" class="btn">Фондувати</a>
 				</div>
 
 			</div>
@@ -200,7 +200,11 @@
 									<a href="#" class="btn <?php the_field('id'); ?>_open">Вартість проекту</a>
 								</div>
 								<div class="sos__info">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/sos1.jpg" alt="">
+									<div class="sos__info_img">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/sos1.jpg" alt="">
+										<div class="sos__info_img--red"><b><?php the_field('zibrano'); ?></b> грн</div>
+										<div class="sos__info_img--accent"><b><?php the_field('filled'); ?></b> грн</div>
+									</div>
 									<div class="sos__info_text">
 										<b class="sos__info_accent">зібрано</b>
 										<b class="sos__info_red">залишилось зібрати</b>

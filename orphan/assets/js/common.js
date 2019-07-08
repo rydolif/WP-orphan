@@ -23,6 +23,7 @@ var youtube = $('.youtube');
 });
 
 //---------------------------jScrollPane-------------------------------
+  $('.sos__content_text').jScrollPane();
   $(window).resize(function(event) {
     $('.sos__content_text').jScrollPane();
   });

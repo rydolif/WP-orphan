@@ -9,7 +9,7 @@
 					</span>
 				</button>
 				
-				<a href="#">Долучитись!</a>
+				<a href="<?php echo get_home_url(); ?>/platizhka/">Долучитись!</a>
 
 			</div>
 		</div>

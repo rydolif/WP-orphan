@@ -10,7 +10,6 @@
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
 	<meta name="theme-color" content="#000">
 
-	<link rel="stylesheet" href="css/main.min.css?v=1">
 	<link href="https://fonts.googleapis.com/css?family=Lora|Montserrat:300,400,500,600,700,800&display=swap" rel="stylesheet">
 
 </head>

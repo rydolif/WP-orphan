@@ -460,6 +460,29 @@
 		&_red
 			color: #ff1e3c
 
+		&_img
+			position: relative
+			width: 100%
+			color: #fff
+			font-size: 24px
+			line-height: 80px
+			text-align: center
+
+			&--accent
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 50%
+				height: 80px
+				background: rgba($accent, .75)
+
+			&--red
+				position: absolute
+				width: 50%
+				height: 80px
+				background: rgba(#ff1e3c, .75)
+				bottom: 80px
+				left: 50%
 	&__prev,
 	&__next
 		position: relative
@@ -1189,50 +1212,64 @@
 				span
 					color: #ff1e3c
 
-			label
-				position: relative
-				left: 0
-				padding-left: 50px
-				margin-bottom: 15px
-				margin-right: 0
-				font-size: 16px
-				line-height: 1
-				color: #000
-				font-weight: 600
+			input
+				-webkit-appearance: checkbox
 				cursor: pointer
+				width: 20px
+				height: 20px
+				margin-right: 20px
 
-				span
-					color: #000 !important
+			span.wpcf7-list-item
+				display: flex
+				align-items: center
+				margin-bottom: 10px
+
+
+			// label
+			// 	margin-bottom: 10px
+			// 	position: relative
+			// 	left: 0
+			// 	padding-left: 50px
+				// margin-bottom: 15px
+			// 	margin-right: 0
+			// 	font-size: 16px
+			// 	line-height: 1
+			// 	color: #000
+			// 	font-weight: 600
+			// 	cursor: pointer
+
+			// 	span
+			// 		color: #000 !important
 				
-				&::before,
-				&::after
-					content: ''
-					position: absolute
-					left: 0
+			// 	&::before,
+			// 	&::after
+			// 		content: ''
+			// 		position: absolute
+			// 		left: 0
 
-				&::before
-					width: 20px
-					height: 20px
-					border: 1px solid #fff
-					background: #fff
+			// 	&::before
+			// 		width: 20px
+			// 		height: 20px
+			// 		border: 1px solid #fff
+			// 		background: #fff
 
-				&::after
-					width: 9px
-					height: 9px
-					border: 1px solid $accent
-					background: $accent
-					left: 5px
-					top: 5px
-					transition: all .6s
+			// 	&::after
+			// 		width: 9px
+			// 		height: 9px
+			// 		border: 1px solid $accent
+			// 		background: $accent
+			// 		left: 5px
+			// 		top: 5px
+			// 		transition: all .6s
 
-			input[type="checkbox"]
-				display: none
+			// input[type="checkbox"]
+			// 	display: none
 
-			input[type="checkbox"]:checked + label::after
-				transform: scale(1)
+			// input[type="checkbox"]:checked + label::after
+			// 	transform: scale(1)
 
-			input[type="checkbox"] + label::after
-				transform: scale(0)
+			// input[type="checkbox"] + label::after
+			// 	transform: scale(0)
 
 		&__btn
 			display: flex
