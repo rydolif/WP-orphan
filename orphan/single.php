@@ -6,7 +6,11 @@
 	<main class="main">
 
 		<div class="container">
-			<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+			<div class="breadcrumbs">
+				<a href="<?php echo get_home_url(); ?>">Головна</a>
+				<span>-</span>
+				<span><?php the_title(); ?></span>
+			</div>
 		</div>
 
 		<section class="page--hero">
@@ -27,26 +31,37 @@
 			</div>
 		</section>
 
-		<section class="page--mision">
-			<div class="container">
-				<h2><b>Наша</b> місія</h2>
-				<p>
-					<b>Допомогти</b> дітям-сиротам, випускникам інтернатів та дитячих будинків <br><b>знайти своє місце в житті і реалізувати свій потенціал</b>
-				</p>
-			</div>
-		</section>
 
-		<section class="page--form">
-			<div class="container">
+		<?php if( have_rows('list') ): ?>
+			<?php while( have_rows('list') ): the_row(); 
+				$form = get_sub_field('form');
+				?>
+					<?php if( $form ): ?>
 
-				<h3><b><span>Анкета</span></b> Волонтера МБФ <b>«Orphan Education Club»</b></h3>
+						<section class="page--mision">
+							<div class="container">
+								<h2><b>Наша</b> місія</h2>
+								<p>
+									<b>Допомогти</b> дітям-сиротам, випускникам інтернатів та дитячих будинків <br><b>знайти своє місце в житті і реалізувати свій потенціал</b>
+								</p>
+							</div>
+						</section>
 
-				<div class="page--form__form">
-					<?php echo do_shortcode( '[contact-form-7 id="47" title="Програми"]' ); ?>
-				</div>
+						<section class="page--form">
+							<div class="container">
 
-			</div>
-		</section>
+								<h3><b><span>Анкета</span></b> Волонтера МБФ <b>«Orphan Education Club»</b></h3>
+
+								<div class="page--form__form">
+									<?php echo $form; ?>
+								</div>
+
+							</div>
+						</section>
+
+					<?php endif; ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
 
 		<?php get_template_part( 'parts/help' ); ?>
 

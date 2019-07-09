@@ -1,7 +1,7 @@
 $(function() {
 
 //---------------------------video-------------------------------
-var youtube = $('.youtube');
+  var youtube = $('.youtube');
   $.each(youtube, function(index, el) {
     var source = "https://img.youtube.com/vi/"+ $(el).data('embed') +"/sddefault.jpg";
     var image = new Image();
@@ -22,11 +22,6 @@ var youtube = $('.youtube');
   });
 });
 
-//---------------------------jScrollPane-------------------------------
-  $('.sos__content_text').jScrollPane();
-  $(window).resize(function(event) {
-    $('.sos__content_text').jScrollPane();
-  });
 
 
 //---------------------------slider-------------------------------
@@ -75,8 +70,8 @@ var youtube = $('.youtube');
   var swiper = new Swiper('.realized__slider', {
     slidesPerView: 2.5,
     spaceBetween: 30,
-    freeMode: true,
-    loop: true,
+    // freeMode: true,
+    // loop: true,
     navigation: {
       nextEl: '.realized__next',
       prevEl: '.realized__prev',
@@ -107,11 +102,11 @@ var youtube = $('.youtube');
     },
     breakpoints: {
       992: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 15
       },
       480: {
-        slidesPerView: 1,
+        slidesPerView: 1.5,
         spaceBetween: 15
       },
     },
@@ -155,3 +150,9 @@ var youtube = $('.youtube');
     });
 
 });
+
+//---------------------------jScrollPane-------------------------------
+  $('.sos__content_text').jScrollPane();
+  $(window).resize(function(event) {
+    $('.sos__content_text').jScrollPane();
+  });

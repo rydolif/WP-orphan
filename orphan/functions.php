@@ -432,6 +432,9 @@ function dimox_breadcrumbs() {
         register_post_type( 'project', $args );
     }
     add_action( 'init', 'project_post_type', 0 );
+    
+    register_taxonomy("project-cat", array("project"), array("hierarchical" => true, "label" => "Категории", "singular_label" => "activity item", "rewrite" => true));
+
 
 
 //------------------Register Custom Post sos----------------------

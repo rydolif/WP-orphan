@@ -373,6 +373,7 @@
 			width: 65px
 			height: 1px
 			background: $text
+			margin-top: 4px
 
 	&__prev,
 	&__next
@@ -424,6 +425,7 @@
 				width: 65px
 				height: 1px
 				background: $text
+				margin-top: 4px
 
 	&__slider
 		&_slide
@@ -440,8 +442,7 @@
 		&_text
 			margin-bottom: 50px
 			height: 330px
-			overflow: auto
-			
+			// overflow: auto
 
 	&__info
 		width: 57%
@@ -541,9 +542,11 @@
 		justify-content: space-between
 		flex-wrap: wrap
 
+		&_col
+			width: 49%
 
 	&__item
-		width: 49%
+		// width: 49%
 		position: relative
 		overflow: hidden
 		margin-bottom: 20px
@@ -586,6 +589,7 @@
 			color: #fff
 			z-index: 1
 			transition: all .3s
+			font-size: 24px
 
 		&_content
 			position: absolute
@@ -651,6 +655,7 @@
 				width: 65px
 				height: 1px
 				background: $text
+				margin-top: 4px
 
 	&__slider
 		overflow: visible
@@ -706,6 +711,7 @@
 				color: $text
 				left: auto
 				bottom: auto
+				margin-bottom: 15px
 
 			p
 				margin-bottom: 5px
@@ -713,6 +719,7 @@
 			a
 				color: $text
 				display: flex
+				justify-content: flex-end
 				align-items: center
 
 				&::after
@@ -723,6 +730,7 @@
 					height: 1px
 					background: $text
 					transition: all .3s
+					margin-top: 3px
 
 				&:hover, 
 				&:focus
@@ -929,7 +937,7 @@
 
 			.help__active
 				animation-delay: 5s
-				animation: active 12s linear infinite
+				animation: active 7s linear infinite
 
 		&--two
 			right: 63%
@@ -937,7 +945,7 @@
 
 			.help__active
 				animation-delay: 10s
-				animation: active 18s linear infinite
+				animation: active 10s linear infinite
 
 		&--three
 			right: 50%
@@ -945,7 +953,7 @@
 
 			.help__active
 				animation-delay: 7s
-				animation: active 16s linear infinite
+				animation: active 9s linear infinite
 
 		&--four
 			right: 0
@@ -953,7 +961,7 @@
 
 			.help__active
 				animation-delay: 5s
-				animation: active 14s linear infinite
+				animation: active 8s linear infinite
 				
 
 	&__active
@@ -1100,6 +1108,10 @@
 		display: flex
 		justify-content: space-between
 		padding-bottom: 180px
+
+		&__page
+			text-align: center
+
 
 		h2
 			margin-bottom: 60px
@@ -1280,6 +1292,8 @@
 			input
 				width: auto
 				padding: 0 50px
+
+
 
 //-----------------------------wp-------------------------------------
 .wpcf7-form

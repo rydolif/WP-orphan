@@ -44,19 +44,11 @@
 
 				<h2><span>Ідея</span> створення фонду</h2>
 				<p>
-					Ми створили Фонд допомоги сиротам ще у 90-тих. Цей час був дуже травматичним для усіх, а особливо – для вихованців дитбудинків,  які не  могли розрізнити   межу між добром  та злом.   Дитячий будинок ніколи  не був гідним  підґгрунтям для зростання та розвитку, а у ті лихі часи – тим більше. Фінансування такі заклади майже не отримували, і підліткам було потрібно все – від спідньої білизни до гумових чобіт. Тоді ми вирішили допомагати їм.
-					У нас не було досвіду, розуміння, яка допомога потрібна і як її правильно надавати. Але ми наважилися спробувати! Першим нашим проектом було надання медичної допомоги сиротам. Наша команда лікарів проводила медогляди в дитячому будинку. за потреби проводила операції. А ми збирали потрібні кошти на лікування. Та чим більше ми працювали з сиротами, тим більше розуміли, що саме підлітки найгостріше потребують допомоги.
+					Ми створили фонд ще на початку 90-тих, щоб у ті страшні часи допомогти найвразливішим – сиротам. Розуміння проблематики та шляхів допомоги ми отримали на власному досвіді. За кілька років виокремили найнужденнішу категорію сиріт – це підлітки. І зосередилися на допомозі їм.
+					Довіра підлітків – наш головний пріоритет. Вони мають бути упевнені, що ми поряд, що виконаємо всі обіцянки, що допоможемо їм за будь-якої потреби. Так налагоджуються стосунки, ціна яких – краще життя, яке ми можемо подарувати. 
 				</p>
 				<p>
-					Це був поклик допомагати саме їм. Для того, щоб зрозуміти потреби підлітків-сиріт та краще познайомитися з ними, ми влаштували перший освітньо-розважальний табір. Тоді ми зрозуміли, що заслужити довіру підлітка – справа не проста і копітка. Потрібні не разові зустрічі, не тижневі табори, а роки праці для того, щоб допомогти їм по-справжньому. 
-				</p>
-				<p>
-					Довіра підлітків – наш головний пріоритет. Вони мають бути упевнені, що ми поряд, що виконаємо всі обіцянки, що допоможемо їм за будь-якої потреби. Так налагоджуються стосунки, ціна яких – краще життя, яке ми можемо подарувати.
-				</p>
-				<p>
-					Найважливіше, це те, що чекає на підлітка за стінами дитячого будинку. Саме тому наша головна задача сьогодні – соціалізувати кожного і працювати з ним доти, доки він не знайде своє місе у житті. Саме так функціонує наша програма «Наставництво», яка веде підлітка через усі найважливіші періоди – навчання, першу роботу, перші серйозні стосунки. Та навіть коли все в його житті влаштовується, ми продовжуємо спілкуватися і бути поряд. 
-				</p>
-				<p>
+					Наша головна задача сьогодні – соціалізувати кожного і працювати з ним доти, доки він не знайде своє місе у житті. Та навіть коли все в його житті влаштовується, ми продовжуємо спілкуватися і бути поряд. 
 					Наша місія – змінити долю дитини. Втримати її  від стрибка у прірву, до якого кожен готовий з моменту потрапляння у дитбудинок. Ми знаємо, що кожен з цих підлітків вартий кращого майбутнього. І робимо все, щоб вони його отримали. 
 				</p>
 
@@ -67,8 +59,8 @@
 			<div class="container">
 
 				<div class="mision__container">
-					<h2><span>Наша</span> <b>місія</b></h2>
-					<p>всебічно підготувати дитину <br> до самостійного життя після виходу з <br> інтернату </p>
+					<h2><span>Наша</span> <b>місія:</b></h2>
+					<p>всебічно підготувати дитину <br>до самостійного життя після виходу з<br> інтернату.(дитбудинку)</p>
 					<div class="mision__img mision__img--one">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mision.jpg" alt="">
 						<div class="help__img help__img--one">
@@ -152,7 +144,7 @@
 				</div>
 
 				<div class="history__btn">
-					<a href="<?php echo get_home_url(); ?>/platizhka/" class="btn">Фондувати</a>
+					<a href="<?php echo get_home_url(); ?>/platizhka/" class="btn btn--red">Фондувати</a>
 				</div>
 
 			</div>
@@ -202,8 +194,8 @@
 								<div class="sos__info">
 									<div class="sos__info_img">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/sos1.jpg" alt="">
-										<div class="sos__info_img--red"><b><?php the_field('zibrano'); ?></b> грн</div>
-										<div class="sos__info_img--accent"><b><?php the_field('filled'); ?></b> грн</div>
+										<div class="sos__info_img--red"><b><?php the_field('filled'); ?></b> грн</div>
+										<div class="sos__info_img--accent"><b><?php the_field('zibrano'); ?></b> грн</div>
 									</div>
 									<div class="sos__info_text">
 										<b class="sos__info_accent">зібрано</b>
@@ -261,41 +253,153 @@
 				<h2><b>Проекти</b> <span>фонду </span></h2>
 
 				<div class="progect__list">
+					<div class="progect__list_col">
+						<?php
+							$args = array(
+								'post_type' => 'fond',
+								'p' => '67'
+							);
 
-					<?php
-						$args = array(
-						'post_type' => 'fond',
-						'posts_per_page' => 8,
-						);
+							$query = new WP_Query( $args );
 
-						$query = new WP_Query( $args );
+							while ( $query->have_posts() ): $query->the_post();
 
-						while ( $query->have_posts() ): $query->the_post();
+						?>
 
-					?>
-
-					<div class="progect__item">
-						<img src="<?php the_post_thumbnail_url(); ?>" alt="">
-						<h3><?php the_title(); ?></h3>
-						<div class="progect__item_content">
-							<div class="progect__item_header">
-								<h3><b><?php the_title(); ?></b></h3>
-								<a href="<?php the_permalink(); ?>">Детальніше</a>
+						<div class="progect__item">
+							<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+							<h3><?php the_title(); ?></h3>
+							<div class="progect__item_content">
+								<div class="progect__item_header">
+									<h3><b><?php the_title(); ?></b></h3>
+									<a href="<?php the_permalink(); ?>">Детальніше</a>
+								</div>
+								<?php the_excerpt(); ?>
 							</div>
-							<?php the_excerpt(); ?>
 						</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
+
+						<?php
+							$args = array(
+								'post_type' => 'fond',
+								'p' => '68'
+							);
+
+							$query = new WP_Query( $args );
+
+							while ( $query->have_posts() ): $query->the_post();
+
+						?>
+
+						<div class="progect__item">
+							<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+							<h3><?php the_title(); ?></h3>
+							<div class="progect__item_content">
+								<div class="progect__item_header">
+									<h3><b><?php the_title(); ?></b></h3>
+									<a href="<?php the_permalink(); ?>">Детальніше</a>
+								</div>
+								<?php the_excerpt(); ?>
+							</div>
+						</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
 					</div>
+					<div class="progect__list_col">
+						<?php
+							$args = array(
+								'post_type' => 'fond',
+								'p' => '66'
+							);
 
-					<?php
-						endwhile; wp_reset_postdata();
-					?>
+							$query = new WP_Query( $args );
 
+							while ( $query->have_posts() ): $query->the_post();
+
+						?>
+
+						<div class="progect__item">
+							<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+							<h3><?php the_title(); ?></h3>
+							<div class="progect__item_content">
+								<div class="progect__item_header">
+									<h3><b><?php the_title(); ?></b></h3>
+									<a href="<?php the_permalink(); ?>">Детальніше</a>
+								</div>
+								<?php the_excerpt(); ?>
+							</div>
+						</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
+						<?php
+							$args = array(
+								'post_type' => 'fond',
+								'p' => '64'
+							);
+
+							$query = new WP_Query( $args );
+
+							while ( $query->have_posts() ): $query->the_post();
+
+						?>
+
+						<div class="progect__item">
+							<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+							<h3><?php the_title(); ?></h3>
+							<div class="progect__item_content">
+								<div class="progect__item_header">
+									<h3><b><?php the_title(); ?></b></h3>
+									<a href="<?php the_permalink(); ?>">Детальніше</a>
+								</div>
+								<?php the_excerpt(); ?>
+							</div>
+						</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
+
+						<?php
+							$args = array(
+								'post_type' => 'fond',
+								'p' => '63'
+							);
+
+							$query = new WP_Query( $args );
+
+							while ( $query->have_posts() ): $query->the_post();
+
+						?>
+
+						<div class="progect__item">
+							<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+							<h3><?php the_title(); ?></h3>
+							<div class="progect__item_content">
+								<div class="progect__item_header">
+									<h3><b><?php the_title(); ?></b></h3>
+									<a href="<?php the_permalink(); ?>">Детальніше</a>
+								</div>
+								<?php the_excerpt(); ?>
+							</div>
+						</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
+					</div>
 				</div>
 
 
 			</div>
 		</section>
-
+<!-- 
 		<section class="realized" id="realized">
 			<div class="container">
 
@@ -309,41 +413,56 @@
 				</div>
 
 				<div class="realized__slider swiper-container">
-					<div class="swiper-wrapper">
 
-						<?php
+
+						<?php  
+
+							/* вывод списка рубрик */
 							$args = array(
-							'post_type' => 'project',
-							'posts_per_page' => -1,
+								'parent' => 0,
+								'hide_empty' => 0,
+								'exclude' => '', // ID рубрики, которую нужно исключить
+								'number' => '0',
+								'orderby' => 'count',
+								'order' => 'DESC',
+								'taxonomy' => 'project-cat', // таксономия, для которой нужны изображения
+								'pad_counts' => true
 							);
+							$catlist = get_categories($args); // получаем список рубрик
+							echo '<div class="swiper-wrapper">'; 
+							foreach($catlist as $categories_item){
 
-							$query = new WP_Query( $args );
+								// получаем данные из плагина Taxonomy Images
+								$terms = apply_filters('taxonomy-images-get-terms', '', array(
+									'taxonomy' => 'project-cat' // таксономия, для которой нужны изображения
+									));
 
-							while ( $query->have_posts() ): $query->the_post();
-
+								if (!empty($terms)){
+									foreach((array)$terms as $term){
+										if ($term->term_id == $categories_item->term_id){
+											// выводим изображение рубрики
+											print 
+												'<div class="realized__slider_slide swiper-slide">
+													<h3>' . $categories_item->cat_name . '</h3>'
+													. wp_get_attachment_image($term->image_id, 'thumbnail'); 
+								                    echo '<div class="realized__slider_content">
+													<h3>' . $categories_item->cat_name . '</h3>
+													<p>' . the_field('text') . ' </p>
+													<a href="' . esc_url(get_term_link($term, $term->taxonomy)) . '">Детальніше</a>
+												</div>';
+											}
+										}
+									}
+								}
+							echo '</div>';
 						?>
-
-							<div class="realized__slider_slide swiper-slide">
-								<img src="<?php the_post_thumbnail_url(); ?>" alt="">
-								<h3><?php the_title(); ?> </h3>
-								<div class="realized__slider_content">
-									<h3><?php the_title(); ?> </h3>
-									<?php the_excerpt(); ?> 
-									<a href="<?php the_permalink(); ?>">Детальніше</a>
-								</div>
-							</div>
-
-						<?php
-							endwhile; wp_reset_postdata();
-						?>
-
-					</div>
+					
 				</div>
 
 			</div>
-		</section>
+		</section> -->
 
-		<section  class="video">
+<!-- 		<section  class="video">
 
 			<div class="youtube" data-embed="<?php the_field('video'); ?>">
 				<div class="play-button">
@@ -352,7 +471,7 @@
 				</div>
 			</div>
 		</section>
-
+ -->
 		<section  class="team" id="team">
 			<div class="container">
 				
