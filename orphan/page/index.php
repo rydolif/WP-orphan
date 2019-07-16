@@ -19,11 +19,11 @@
 					<div class="hero__block">
 						<div>
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="" class="hero__logo">
-							<a class="hero__play" data-fancybox href="<?php the_field('modal-video'); ?>">
+                            <!-- <a class="hero__play" data-fancybox href="<?php the_field('modal-video'); ?>">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png" alt="">
-							</a>
+							</a> -->
 						</div>
-						<p>знання,<br>що змінюють<br><span>життя</span></p>
+						<p>навчити дітей <br>жити - найважливіше <br>у <span>нашому навчанні</span></p>
 					</div>
 
 					<div class="hero__soc">
@@ -144,6 +144,7 @@
 				</div>
 
 				<div class="history__btn">
+					<p>Ти хочеш бути причетним до порятунку життя?</p>
 					<a href="<?php echo get_home_url(); ?>/platizhka/" class="btn btn--red">Фондувати</a>
 				</div>
 
@@ -187,7 +188,7 @@
 									<div class="sos__content_text">
 										<?php the_content(); ?>
 									</div>
-									<p><b>Реквізити <?php the_field('requisite'); ?></b></p>
+									<!-- <p><b>Реквізити <?php the_field('requisite'); ?></b></p> -->
 									<p>Цінуємо кожного!</p>
 									<a href="#" class="btn <?php the_field('id'); ?>_open">Вартість проекту</a>
 								</div>
@@ -242,6 +243,11 @@
 							endwhile; wp_reset_postdata();
 						?>
 					</div>
+				</div>
+
+				<div class="history__btn">
+					<p>Ти необхідний сироті</p>
+					<a href="<?php echo get_home_url(); ?>/platizhka/" class="btn btn--red">Фондувати</a>
 				</div>
 
 			</div>
@@ -396,10 +402,14 @@
 					</div>
 				</div>
 
+				<div class="history__btn">
+					<p>Ти хочеш допомогти дитині-сироті отримати освіту?</p>
+					<a href="<?php echo get_home_url(); ?>/platizhka/" class="btn btn--red">Фондувати</a>
+				</div>
 
 			</div>
 		</section>
-<!-- 
+ 
 		<section class="realized" id="realized">
 			<div class="container">
 
@@ -414,8 +424,7 @@
 
 				<div class="realized__slider swiper-container">
 
-
-						<?php  
+						<?php 
 
 							/* вывод списка рубрик */
 							$args = array(
@@ -448,6 +457,7 @@
 								                    echo '<div class="realized__slider_content">
 													<h3>' . $categories_item->cat_name . '</h3>
 													<p>' . the_field('text') . ' </p>
+													<p>' . category_description() . '</p>
 													<a href="' . esc_url(get_term_link($term, $term->taxonomy)) . '">Детальніше</a>
 												</div>';
 											}
@@ -460,7 +470,7 @@
 				</div>
 
 			</div>
-		</section> -->
+		</section>
 
 <!-- 		<section  class="video">
 
