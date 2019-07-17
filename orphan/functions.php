@@ -501,3 +501,29 @@ function dimox_breadcrumbs() {
         register_post_type( 'fond', $args );
     }
     add_action( 'init', 'fond_post_type', 0 );
+
+
+function true_taxonomy_filter() {
+  global $typenow; // тип поста
+  if( $typenow == 'post' ){ // для каких типов постов отображать
+    $taxes = array('project-cat'); // таксономии через запятую
+    foreach ($taxes as $tax) {
+      $current_tax = isset( $_GET[$tax] ) ? $_GET[$tax] : '';
+      $tax_obj = get_taxonomy($tax);
+      $tax_name = mb_strtolower($tax_obj->labels->name);
+      // функция mb_strtolower переводит в нижний регистр
+      // она может не работать на некоторых хостингах, если что, убирайте её отсюда
+      $terms = get_terms($tax);
+      if(count($terms) > 0) {
+        echo "<select name='$tax' id='$tax' class='postform'>";
+        echo "<option value=''>Все $tax_name</option>";
+        foreach ($terms as $term) {
+          echo '<option value='. $term->slug, $current_tax == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>'; 
+        }
+        echo "</select>";
+      }
+    }
+  }
+}
+ 
+add_action( 'restrict_manage_posts', 'true_taxonomy_filter' );

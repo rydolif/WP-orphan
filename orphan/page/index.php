@@ -423,7 +423,7 @@
 				</div>
 
 				<div class="realized__slider swiper-container">
-
+ 
 						<?php 
 
 							/* вывод списка рубрик */
@@ -459,14 +459,15 @@
 													<p>' . the_field('text') . ' </p>
 													<p>' . category_description() . '</p>
 													<a href="' . esc_url(get_term_link($term, $term->taxonomy)) . '">Детальніше</a>
-												</div>';
+												</div></div>';
 											}
 										}
 									}
 								}
 							echo '</div>';
 						?>
-					
+
+
 				</div>
 
 			</div>

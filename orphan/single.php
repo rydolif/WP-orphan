@@ -13,24 +13,17 @@
 			</div>
 		</div>
 
-		<section class="page--hero">
-			<div class="page--hero__container container">
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<section class="page--post">
+				<div class="container">
+						
+					<h2><?php the_title(); ?></h2>
+					<?php the_content(); ?>
 
-				<div class="page--hero__text">
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						<h2><?php the_title(); ?></h2>
-						<?php the_content(); ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
 				</div>
-
-				<div class="page--hero__img">
-					<img src="<?php the_post_thumbnail_url(); ?>" alt="">
-				</div>
-
-			</div>
-		</section>
-
+			</section>
+		<?php endwhile; ?>
+		<?php endif; ?>
 
 		<?php if( have_rows('list') ): ?>
 			<?php while( have_rows('list') ): the_row(); 

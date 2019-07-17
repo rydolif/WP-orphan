@@ -1115,7 +1115,7 @@
 	&--hero
 		display: flex
 		justify-content: space-between
-		padding-bottom: 180px
+		padding-bottom: 140px
 
 		&__page
 			text-align: center
@@ -1302,7 +1302,125 @@
 				padding: 0 50px
 
 
+	&--article
+		padding: 40px 0 80px 0
 
+		&__list
+			display: flex
+			flex-wrap: wrap
+
+		&__item
+			position: relative
+			width: 32%
+			margin-bottom: 20px
+			margin-right: 1%
+
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 100%
+				right: 0
+				bottom: 0
+				display: block
+				background: rgba(#4c07e5, .25)
+				transition: all .3s
+
+			&:hover,
+			&:focus
+				&::before
+					top: 0
+
+				h3
+					opacity: 0
+
+				.page--article__content
+					bottom: 0
+					
+					h3
+						opacity: 1
+
+			h3
+				position: absolute
+				bottom: 20px
+				left: 20px
+				color: #fff
+				transition: all .3s
+
+			img
+				width: 100%
+
+		&__content
+			position: absolute
+			bottom: -100%
+			background: #fff
+			transition: all .6s
+			padding-top: 40px
+			width: 100%
+
+			h3
+				position: relative
+				color: $text
+				left: auto
+				bottom: auto
+				margin-bottom: 5px
+
+			p
+				margin-bottom: 5px
+
+			a
+				color: $text
+				display: flex
+				justify-content: flex-end
+				align-items: center
+
+				&::after
+					content: ''
+					display: block
+					margin-left: 15px
+					width: 35px
+					height: 1px
+					background: $text
+					transition: all .3s
+					margin-top: 3px
+
+				&:hover, 
+				&:focus
+					&::after
+						width: 65px
+
+
+	&--post
+		display: flex
+		justify-content: space-between
+		padding-bottom: 140px
+
+		&__page
+			text-align: center
+
+
+		h2
+			margin-bottom: 30px
+
+		p, ul
+			text-indent: 1.5em
+			margin-bottom: 20px
+
+		img
+			float: left
+			width: 50%
+			height: auto
+			margin-right: 20px
+			margin-bottom: 20px
+		
+		iframe
+			width: 50%
+			height: 400px
+			margin-right: 20px
+			margin-bottom: 20px
+			float: left
+
+		
 //-----------------------------wp-------------------------------------
 .wpcf7-form
 	display: flex
