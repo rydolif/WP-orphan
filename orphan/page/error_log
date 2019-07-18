@@ -1,0 +1,44 @@
+[18-Jul-2019 01:11:45 Europe/Kiev] PHP Fatal error:  Call to undefined function get_header() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 8
+[18-Jul-2019 01:11:58 Europe/Kiev] PHP Fatal error:  Call to undefined function get_header() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 8
+[18-Jul-2019 01:16:56 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 23
+[18-Jul-2019 01:17:07 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 23
+[18-Jul-2019 01:17:28 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 23
+[18-Jul-2019 01:17:34 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 23
+[18-Jul-2019 01:17:42 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 23
+[18-Jul-2019 01:20:00 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 24
+[18-Jul-2019 01:20:03 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 24
+[18-Jul-2019 01:20:22 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 24
+[18-Jul-2019 01:20:40 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 24
+[18-Jul-2019 01:21:20 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 24
+[18-Jul-2019 01:21:22 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 24
+[18-Jul-2019 01:21:49 Europe/Kiev] PHP Parse error:  syntax error, unexpected 'price' (T_STRING), expecting ')' in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 19
+[18-Jul-2019 01:21:51 Europe/Kiev] PHP Parse error:  syntax error, unexpected 'price' (T_STRING), expecting ')' in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 19
+[18-Jul-2019 01:22:35 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 24
+[18-Jul-2019 01:23:39 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 26
+[18-Jul-2019 01:24:08 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 26
+[18-Jul-2019 01:24:46 Europe/Kiev] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'version is null' in /home/orphancl/public_html/wp-content/themes/orphan/page/LiqPay.php:170
+Stack trace:
+#0 /home/orphancl/public_html/wp-content/themes/orphan/page/LiqPay.php(127): LiqPay->cnb_params(Array)
+#1 /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php(19): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/orphancl/public_html/wp-content/themes/orphan/page/LiqPay.php on line 170
+[18-Jul-2019 01:24:48 Europe/Kiev] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'version is null' in /home/orphancl/public_html/wp-content/themes/orphan/page/LiqPay.php:170
+Stack trace:
+#0 /home/orphancl/public_html/wp-content/themes/orphan/page/LiqPay.php(127): LiqPay->cnb_params(Array)
+#1 /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php(19): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/orphancl/public_html/wp-content/themes/orphan/page/LiqPay.php on line 170
+[18-Jul-2019 01:24:55 Europe/Kiev] PHP Warning:  Missing argument 1 for LiqPay::cnb_form(), called in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 19 and defined in /home/orphancl/public_html/wp-content/themes/orphan/page/LiqPay.php on line 121
+[18-Jul-2019 01:24:55 Europe/Kiev] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'version is null' in /home/orphancl/public_html/wp-content/themes/orphan/page/LiqPay.php:170
+Stack trace:
+#0 /home/orphancl/public_html/wp-content/themes/orphan/page/LiqPay.php(127): LiqPay->cnb_params(NULL)
+#1 /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php(19): LiqPay->cnb_form()
+#2 {main}
+  thrown in /home/orphancl/public_html/wp-content/themes/orphan/page/LiqPay.php on line 170
+[18-Jul-2019 01:25:40 Europe/Kiev] PHP Warning:  require(Liq2Pay.php): failed to open stream: No such file or directory in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 2
+[18-Jul-2019 01:25:40 Europe/Kiev] PHP Warning:  require(Liq2Pay.php): failed to open stream: No such file or directory in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 2
+[18-Jul-2019 01:25:40 Europe/Kiev] PHP Fatal error:  require(): Failed opening required 'Liq2Pay.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 2
+[18-Jul-2019 01:26:33 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 26
+[18-Jul-2019 01:26:40 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 26
+[18-Jul-2019 01:27:24 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 26
+[18-Jul-2019 01:27:32 Europe/Kiev] PHP Fatal error:  Call to undefined function get_home_url() in /home/orphancl/public_html/wp-content/themes/orphan/page/submitPayment.php on line 26
