@@ -252,6 +252,41 @@
 		float: left
 
 
+.payment
+	padding: 60px 0
+
+	h2
+		width: 100%
+		margin-bottom: 30px
+
+	input
+		border: 1px solid #f2f2f2
+		padding: 0 20px
+
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 80%
+		margin: 0 auto
+
+	&__liqpay
+		width: 49%
+
+		&_line
+			position: relative
+			margin-bottom: 22px
+
+	&__text
+		width: 49%
+
+	.btn
+		width: auto
+		border: 1px solid $text
+		padding: 0 70px
+	
+
+
 .mision
 	padding-bottom: 120px
 
@@ -705,6 +740,7 @@
 
 			img
 				width: 100%
+				height: auto
 
 		&_content
 			position: absolute
@@ -1244,53 +1280,6 @@
 				align-items: center
 				margin-bottom: 10px
 
-
-			// label
-			// 	margin-bottom: 10px
-			// 	position: relative
-			// 	left: 0
-			// 	padding-left: 50px
-				// margin-bottom: 15px
-			// 	margin-right: 0
-			// 	font-size: 16px
-			// 	line-height: 1
-			// 	color: #000
-			// 	font-weight: 600
-			// 	cursor: pointer
-
-			// 	span
-			// 		color: #000 !important
-				
-			// 	&::before,
-			// 	&::after
-			// 		content: ''
-			// 		position: absolute
-			// 		left: 0
-
-			// 	&::before
-			// 		width: 20px
-			// 		height: 20px
-			// 		border: 1px solid #fff
-			// 		background: #fff
-
-			// 	&::after
-			// 		width: 9px
-			// 		height: 9px
-			// 		border: 1px solid $accent
-			// 		background: $accent
-			// 		left: 5px
-			// 		top: 5px
-			// 		transition: all .6s
-
-			// input[type="checkbox"]
-			// 	display: none
-
-			// input[type="checkbox"]:checked + label::after
-			// 	transform: scale(1)
-
-			// input[type="checkbox"] + label::after
-			// 	transform: scale(0)
-
 		&__btn
 			display: flex
 			justify-content: flex-end
@@ -1398,6 +1387,14 @@
 		&__page
 			text-align: center
 
+		&__btn
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: 10px
+
+			.btn
+				margin-right: 15px
+				margin-bottom: 10px
 
 		h2
 			margin-bottom: 30px
@@ -1420,6 +1417,16 @@
 			margin-bottom: 20px
 			float: left
 
+
+.gallery
+	padding-bottom: 40px
+
+	&__slider
+		&_slide
+			img
+				max-width: 100%
+				display: block
+				margin: 0 auto
 		
 //-----------------------------wp-------------------------------------
 .wpcf7-form
@@ -1434,7 +1441,6 @@
 
 		input
 			width: 100%
-
 
 
 

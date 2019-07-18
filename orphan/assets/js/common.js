@@ -1,5 +1,34 @@
 $(function() {
 
+  $(".payment__liqpay").each(function(index, el) {
+    $(el).addClass('payment__liqpay-' + index);
+
+    $('.payment__liqpay-' + index).validate({
+      rules: {
+        tel: {
+          required: true,
+          phoneno: true
+        },
+        name: 'required',
+      },
+      messages: {
+        name: "Ведіть Ваше Ім'я",
+        tel: "Ведіть Ваш телефон",
+        mail: "Ведіть Вашу пошту",
+      },
+      submitHandler: function(form) {
+        var t = {
+          name: jQuery('.payment__liqpay-' + index).find("input[name=name]").val(),
+          tel: jQuery('.payment__liqpay-' + index).find("input[name=tel]").val(),
+          mail: jQuery('.payment__liqpay-' + index).find("input[name=mail]").val(),
+          subject: jQuery('.payment__liqpay-' + index).find("input[name=subject]").val()
+        };
+        ajaxSend('.payment__liqpay-' + index, t);
+      }
+    });
+
+  });
+
 //---------------------------video-------------------------------
   var youtube = $('.youtube');
   $.each(youtube, function(index, el) {
@@ -43,9 +72,6 @@ $(function() {
         slidesPerView: 2,
         spaceBetween: 15
       },
-    },
-    autoplay: {
-      delay: 5000,
     }
   });
 
@@ -68,7 +94,7 @@ $(function() {
   });
 
   var swiper = new Swiper('.realized__slider', {
-    slidesPerView: 2.5,
+    slidesPerView: 3,
     spaceBetween: 30,
     // freeMode: true,
     // loop: true,
@@ -115,6 +141,17 @@ $(function() {
     }
   });
 
+  var swiper = new Swiper('.gallery__slider', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    freeMode: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 1,
+        spaceBetween: 15
+      }
+    }
+  });
 //------------------------------гамбургер-----------------------------
   $('.hamburger').click(function() {
     $(this).toggleClass('hamburger--active');

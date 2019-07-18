@@ -7,17 +7,53 @@
 
 		<div class="container">
 			<div class="breadcrumbs">
-				<a href="<?php echo get_home_url(); ?>">Головна</a>
-				<span>-</span>
-				<span><?php the_title(); ?></span>
+				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 			</div>
 		</div>
+
+		<section class="gallery">
+			<div class="container">
+				<?php if( have_rows('gallery') ): ?>
+					<div class="gallery__slider swiper-container">
+						<div class="swiper-wrapper">
+
+							<?php while( have_rows('gallery') ): the_row(); 
+								$img = get_sub_field('img');
+							?>
+								
+								<div class="gallery__slider_slide swiper-slide">
+									<img src="<?php echo $img; ?>" alt="">
+								</div>
+
+							<?php endwhile; ?>
+
+						</div>
+					</div>
+				<?php endif; ?>
+			</div>
+		</section>
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<section class="page--post">
 				<div class="container">
 						
 					<h2><?php the_title(); ?></h2>
+
+					<?php if( have_rows('file') ): ?>
+						<div class="page--post__btn">
+							<?php while( have_rows('file') ): the_row(); 
+								$link = get_sub_field('link');
+								$name = get_sub_field('name');
+							?>
+								<?php if( $link ): ?>
+
+									<a href="<?php echo $link; ?>" class="btn"><?php echo $name; ?></a>
+									
+								<?php endif; ?>
+							<?php endwhile; ?>
+						</div>
+					<?php endif; ?>
+
 					<?php the_content(); ?>
 
 				</div>

@@ -7,10 +7,25 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<a href="<?php echo get_home_url(); ?>">Головна</a>
-				<span>-</span>
+				<span>></span>
 				<span>Реалізовані проекти</span>
 			</div>
 		</div>
+
+		<section class="page--hero">
+			<div class="page--hero__container container">
+
+				<div class="page--hero__text">
+					<h2><?php single_term_title(); ?></h2>
+					<?php echo term_description(); ?>
+				</div>
+
+				<div class="page--hero__img">
+					<?php print apply_filters( 'taxonomy-images-queried-term-image', '' ); ?>
+				</div>
+
+			</div>
+		</section>
 
 		<section class="page--article">
 			<div class="container">

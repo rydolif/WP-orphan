@@ -12,43 +12,49 @@
 	<main class="main">
 
 		<div class="container">
-			<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+			<div class="breadcrumbs">
+				<a href="<?php echo get_home_url(); ?>">Головна</a>
+				<span>-</span>
+				<span><?php the_title(); ?></span>
+			</div>
 		</div>
 
-		<section class="content">
-			<div class="container">
+		<section class="payment">
+			<div class="payment__container container">
 
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<h2><?php the_title(); ?></h2>
-					<?php the_content(); ?>
-				<?php endwhile; ?>
-				<?php endif; ?>
+				<h2><?php the_title(); ?></h2>
+
+				<form class="payment__liqpay" method="POST" action="/wp-content/themes/orphan/page/submitPayment.php">
+					<div class="payment__liqpay_line">
+						<input type="text" name="name" placeholder="Ваше Ім'я" required>
+					</div>
+					<div class="payment__liqpay_line">
+						<input type="email" name="mail" placeholder="Ваша пошта" required>
+					</div>
+					<div class="payment__liqpay_line">
+						<input type="tel" name="tel" placeholder="Ваш номер телефону" required>
+					</div>
+					<div class="payment__liqpay_line">
+						<input type="text" name="childname" placeholder="ПІП дитини/проекту">
+					</div>
+					<div class="payment__liqpay_line">
+						<input type="text" name="price" placeholder="Ведіть суму">
+					</div>
+					<div class="payment__liqpay_line">
+						<input type="submit" class="btn">
+					</div>
+				</form>
+
+				<div class="payment__text">
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php the_content(); ?>
+					<?php endwhile; ?>
+					<?php endif; ?>
+				</div>
 
 			</div>
 		</section>
 
-		<section>
-		    <form method="POST" action="/wp-content/themes/orphan/page/submitPayment.php">
-          <div class="">
-            <input type="text" name="name" placeholder="Ваше ФИО">
-          </div>
-          <div class="">
-            <input type="email" name="mail" placeholder="Ваша пошта">
-          </div>
-          <div class="">
-            <input type="tel" name="tel" placeholder="Ваш телефон">
-          </div>
-          <div class="">
-            <input type="text" name="childname" placeholder="Імя і фамілія дитини">
-          </div>
-          <div class="">
-            <input type="text" name="price" placeholder="Ведите суму">
-          </div>
-          <div>
-            <input type="submit">
-          </div>
-        </form>
-		</section>
 
 		<section class="page--mision">
 			<div class="container">

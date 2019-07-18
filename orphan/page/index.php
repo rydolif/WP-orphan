@@ -60,7 +60,7 @@
 
 				<div class="mision__container">
 					<h2><span>Наша</span> <b>місія:</b></h2>
-					<p>всебічно підготувати дитину <br>до самостійного життя після виходу з<br> інтернату.(дитбудинку)</p>
+					<p>всебічно підготувати дитину <br>до самостійного життя після виходу з<br> інтернату.</p>
 					<div class="mision__img mision__img--one">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mision.jpg" alt="">
 						<div class="help__img help__img--one">
@@ -415,11 +415,11 @@
 
 				<div class="realized__header">
 					<h2><b>Реалізовані</b> <span>проекти</span></h2>
-					<div>
+					<!-- <div>
 						<div class="realized__prev swiper-button-prev">Назад</div>
 						<div class="realized__next swiper-button-next">Далі</div>
 						<span></span>
-					</div>
+					</div> -->
 				</div>
 
 				<div class="realized__slider swiper-container">
@@ -456,8 +456,7 @@
 													. wp_get_attachment_image($term->image_id, 'thumbnail'); 
 								                    echo '<div class="realized__slider_content">
 													<h3>' . $categories_item->cat_name . '</h3>
-													<p>' . the_field('text') . ' </p>
-													<p>' . category_description() . '</p>
+													<p>' . term_description() . '</p>
 													<a href="' . esc_url(get_term_link($term, $term->taxonomy)) . '">Детальніше</a>
 												</div></div>';
 											}
@@ -473,7 +472,7 @@
 			</div>
 		</section>
 
-<!-- 		<section  class="video">
+ 		<!-- <section  class="video">
 
 			<div class="youtube" data-embed="<?php the_field('video'); ?>">
 				<div class="play-button">
@@ -481,8 +480,8 @@
 					<p>не <span>будь</span> Байдужий</p>
 				</div>
 			</div>
-		</section>
- -->
+		</section> -->
+
 		<section  class="team" id="team">
 			<div class="container">
 				

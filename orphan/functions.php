@@ -48,12 +48,12 @@
     remove_action('wp_head','rsd_link');  // сервис Really Simple Discovery
     remove_action('wp_head','wlwmanifest_link'); // Windows Live Writer
     remove_action('wp_head','wp_generator');  // скрыть версию wordpress
-    function modify_jquery() {
-            if (!is_admin()) {           
-            wp_deregister_script('jquery');
-            }
-    }
-    add_action('init', 'modify_jquery');
+    // function modify_jquery() {
+    //         if (!is_admin()) {           
+    //         wp_deregister_script('jquery');
+    //         }
+    // }
+    // add_action('init', 'modify_jquery');
 
 //------------------информация---------------------
     if( function_exists('acf_add_options_page') ) {
@@ -158,7 +158,7 @@
 */
 function dimox_breadcrumbs() {
   /* === ОПЦИИ === */
-  $text['home'] = 'Главная'; // текст ссылки "Главная"
+  $text['home'] = 'Головна'; // текст ссылки "Главная"
   $text['category'] = '%s'; // текст для страницы рубрики
   $text['search'] = 'Результаты поиска по запросу "%s"'; // текст для страницы с результатами поиска
   $text['tag'] = 'Записи с тегом "%s"'; // текст для страницы тега

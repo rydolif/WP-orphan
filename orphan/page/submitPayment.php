@@ -18,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require("LiqPay.php"); // Підключаємо бібліотеку LiqPay.
     
     // Ключики. Не забудьте помінять на дані замовників !!!
-    $public_key = 'i65688035387';
-    $private_key = 'hdpNyMEWEVz2T44hddhyAQQxq1uc1G6bUrKqoe7V';
+    $public_key = 'i71382271416';
+    $private_key = 'YEtoNIyeVMMSzSBo2w3gifM2hbyeEMuII1o5TU3C';
 
     // В $_POST є всі дані з форми, я запхав їх в опис платіжки.
     // Не знаю, чи це потрібно. Можете ці дані собі зберігати.
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_POST['mail'] . "\r\n".
         $_POST['tel'] . "\r\n".
         $_POST['childname'];
-    $price = $_POST['price'];
+        $price = $_POST['price'];
 
     // Створюємо екземпляр бібліотеки з нашими ключами 
     $liqpay = new LiqPay($public_key, $private_key);
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'currency'       => 'UAH',
         'description'    => $description,
         // Можна ще щось вставити сюди :)
-        'result_url'     => 'http://www.orphan-club.com'
+        'result_url'     => 'http://www.orphan-club.com/platizhka/'
     ));  
     
     // Запихаємо згенеровану кнопку в HTML
