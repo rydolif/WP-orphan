@@ -158,8 +158,6 @@
 
 					<h2>SOS</h2>
 
-					<div class="sos__pagination swiper-pagination"></div>
-
 					<div>
 						<div class="sos__prev swiper-button-prev">Назад</div>
 						<div class="sos__next swiper-button-next">Далі</div>

@@ -14,7 +14,7 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<a href="<?php echo get_home_url(); ?>">Головна</a>
-				<span>-</span>
+				<span>›</span>
 				<span><?php the_title(); ?></span>
 			</div>
 		</div>
@@ -34,9 +34,9 @@
 					<div class="payment__liqpay_line">
 						<input type="tel" name="tel" placeholder="Ваш номер телефону" required>
 					</div>
-					<div class="payment__liqpay_line">
+<!-- 					<div class="payment__liqpay_line">
 						<input type="text" name="childname" placeholder="ПІП дитини/проекту">
-					</div>
+					</div> -->
 					<div class="payment__liqpay_line">
 						<input type="text" name="price" placeholder="Ведіть суму">
 					</div>

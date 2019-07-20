@@ -7,7 +7,7 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<a href="<?php echo get_home_url(); ?>">Головна</a>
-				<span>></span>
+				<span>›</span>
 				<span>Реалізовані проекти</span>
 			</div>
 		</div>
@@ -29,6 +29,8 @@
 
 		<section class="page--article">
 			<div class="container">
+
+				<h2>Звіти</h2>
 				<div class="page--article__list">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

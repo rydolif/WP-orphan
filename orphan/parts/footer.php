@@ -1,7 +1,7 @@
 
 	<footer class="footer">
 		<div class="footer__container container">
-			<p>© Orphan education 2019, Всі права захищені</p>
+			<p>© Orphan Education Club 2019, Всі права захищені</p>
 			<ul>
 				<li class="more"><a href="#content">Про нас</a></li>
 				<li class="more"><a href="#mision">Наша місія</a></li>

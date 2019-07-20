@@ -7,7 +7,9 @@
 
 		<div class="container">
 			<div class="breadcrumbs">
-				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+				<a href="<?php echo get_home_url(); ?>/#progect">Головна</a>
+				<span>›</span>
+				<span><?php the_title(); ?></span>
 			</div>
 		</div>
 		
@@ -29,7 +31,7 @@
 		<?php endwhile; ?>
 		<?php endif; ?>
 
-		<?php if( have_rows('file') ): ?>
+		<?php if( have_rows('list') ): ?>
 			<?php while( have_rows('list') ): the_row(); 
 				$form = get_sub_field('form');
 			?>

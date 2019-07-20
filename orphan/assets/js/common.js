@@ -135,9 +135,6 @@ $(function() {
         slidesPerView: 1.5,
         spaceBetween: 15
       },
-    },
-    autoplay: {
-      delay: 5000,
     }
   });
 
