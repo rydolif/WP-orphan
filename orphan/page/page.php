@@ -38,7 +38,7 @@
 						<input type="text" name="childname" placeholder="ПІП дитини/проекту">
 					</div> -->
 					<div class="payment__liqpay_line">
-						<input type="text" name="price" placeholder="Ведіть суму">
+						<input type="text" name="price" placeholder="100" required>
 					</div>
 					<div class="payment__liqpay_line">
 						<input type="submit" class="btn">

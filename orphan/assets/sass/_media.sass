@@ -23,7 +23,20 @@
 			margin-bottom: 60px
 
 
+	.page
+		&--hero
+			&__text
+				width: 32%
+				margin-bottom: 20px
+
+			&__img
+				width: 65%
+
 @media only screen and (max-width : 1200px)
+	.gallery
+		&__slider
+			width: 80%
+
 	.payment
 		padding: 0 0 40px 0
 
@@ -51,11 +64,24 @@
 		padding: 10px 0
 
 	.page
+		&--post
+			iframe
+				width: 100%
+
 		&--hero
-			padding-bottom: 100px
+			padding-bottom: 60px
 
 			h2
 				margin-bottom: 30px
+
+			&__container
+				flex-wrap: wrap
+
+			&__text
+				width: 100%
+
+			&__img
+				width: 100%
 
 		&--mision
 			p
@@ -227,10 +253,6 @@
 				width: 100%
 				margin-bottom: 15px
 
-			&__img
-				width: 80%
-				margin: 0 auto
-
 		&--mision
 			padding: 70px 0
 
@@ -245,8 +267,6 @@
 				margin-right: 2%
 
 		&--post
-			display: flex
-			justify-content: space-between
 			padding-bottom: 60px
 
 			&__page
@@ -441,6 +461,10 @@
 
 
 @media only screen and (max-width : 767px)
+	.gallery
+		&__slider
+			width: 100%
+
 	.payment
 		&__text,
 		&__liqpay

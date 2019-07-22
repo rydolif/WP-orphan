@@ -60,7 +60,7 @@
 
 				<div class="mision__container">
 					<h2><span>Наша</span> <b>місія:</b></h2>
-					<p>всебічно підготувати дитину <br>до самостійного життя після виходу з<br> інтернату.</p>
+					<p>всебічно підготувати дитину <br>до самостійного життя після виходу з<br> Інтернату.</p>
 					<div class="mision__img mision__img--one">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mision.jpg" alt="">
 						<div class="help__img help__img--one">
@@ -223,7 +223,7 @@
 											<tr>
 												<th><?php echo $name; ?></th>
 												<td><?php echo $number; ?></td>
-												<td><span><?php echo $price; ?> грн</span></td>
+												<td><span><?php echo $price; ?></span></td>
 											</tr>
 
 										<?php endwhile; ?>
@@ -419,52 +419,34 @@
 						<span></span>
 					</div> -->
 				</div>
-
+				
 				<div class="realized__slider swiper-container">
- 
-						<?php 
+					<div class="swiper-wrapper">
 
-							/* вывод списка рубрик */
+						<?php
 							$args = array(
-								'parent' => 0,
-								'hide_empty' => 0,
-								'exclude' => '', // ID рубрики, которую нужно исключить
-								'number' => '0',
-								'orderby' => 'count',
-								'order' => 'DESC',
-								'taxonomy' => 'project-cat', // таксономия, для которой нужны изображения
-								'pad_counts' => true
+							'post_type' => 'project',
+							'posts_per_page' => -1,
 							);
-							$catlist = get_categories($args); // получаем список рубрик
-							echo '<div class="swiper-wrapper">'; 
-							foreach($catlist as $categories_item){
-
-								// получаем данные из плагина Taxonomy Images
-								$terms = apply_filters('taxonomy-images-get-terms', '', array(
-									'taxonomy' => 'project-cat' // таксономия, для которой нужны изображения
-									));
-
-								if (!empty($terms)){
-									foreach((array)$terms as $term){
-										if ($term->term_id == $categories_item->term_id){
-											// выводим изображение рубрики
-											print 
-												'<div class="realized__slider_slide swiper-slide">
-													<h3>' . $categories_item->cat_name . '</h3>'
-													. wp_get_attachment_image($term->image_id, 'thumbnail'); 
-								                    echo '<div class="realized__slider_content">
-													<h3>' . $categories_item->cat_name . '</h3>
-													<p>' . term_description() . '</p>
-													<a href="' . esc_url(get_term_link($term, $term->taxonomy)) . '">Детальніше</a>
-												</div></div>';
-											}
-										}
-									}
-								}
-							echo '</div>';
+							$query = new WP_Query( $args );
+							while ( $query->have_posts() ): $query->the_post();
 						?>
 
+							<div class="realized__slider_slide swiper-slide">
+								<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+								<h3><?php the_title(); ?> </h3>
+								<div class="realized__slider_content">
+									<h3><?php the_title(); ?> </h3>
+									<?php the_excerpt(); ?> 
+									<a href="<?php the_permalink(); ?>">Детальніше</a>
+								</div>
+							</div>
 
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
+
+					</div>
 				</div>
 
 			</div>

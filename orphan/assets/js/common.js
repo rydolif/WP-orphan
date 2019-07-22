@@ -12,15 +12,17 @@ $(function() {
         name: 'required',
       },
       messages: {
-        name: "Ведіть Ваше Ім'я",
-        tel: "Ведіть Ваш телефон",
-        mail: "Ведіть Вашу пошту",
+        name: "Введіть Ваше Ім'я",
+        tel: "Введіть Ваш телефон",
+        mail: "Введіть Вашу пошту",
+        price: "Введіть суму",
       },
       submitHandler: function(form) {
         var t = {
           name: jQuery('.payment__liqpay-' + index).find("input[name=name]").val(),
           tel: jQuery('.payment__liqpay-' + index).find("input[name=tel]").val(),
           mail: jQuery('.payment__liqpay-' + index).find("input[name=mail]").val(),
+          price: jQuery('.payment__liqpay-' + index).find("input[name=price]").val(),
           subject: jQuery('.payment__liqpay-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.payment__liqpay-' + index, t);
@@ -139,16 +141,17 @@ $(function() {
   });
 
   var swiper = new Swiper('.gallery__slider', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 30,
-    freeMode: true,
-    breakpoints: {
-      992: {
-        slidesPerView: 1,
-        spaceBetween: 15
-      }
+    navigation: {
+      nextEl: '.gallery__next',
+      prevEl: '.gallery__prev',
+    },
+    autoplay: {
+      delay: 5000,
     }
   });
+
 //------------------------------гамбургер-----------------------------
   $('.hamburger').click(function() {
     $(this).toggleClass('hamburger--active');

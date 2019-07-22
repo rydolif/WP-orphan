@@ -23,7 +23,7 @@
 					</div>
 
 					<div class="page--hero__img">
-						<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+						<img src="<?php the_post_thumbnail_url(); ?>" alt="" class="page--hero__img_img">
 					</div>
 
 				</div>
@@ -49,7 +49,7 @@
 					<section class="page--form">
 						<div class="container">
 
-							<h3><b><span>Анкета</span></b> Волонтера МБФ <b>«Orphan Education Club»</b></h3>
+							<h3><b><span>Анкета</span></b> Волонтера БФ <b>«Orphan Education Club»</b></h3>
 
 							<div class="page--form__form">
 								<?php echo $form; ?>

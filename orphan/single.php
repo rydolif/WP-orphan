@@ -7,38 +7,50 @@
 
 		<div class="container">
 			<div class="breadcrumbs">
-				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+				<a href="<?php echo get_home_url(); ?>">Головна</a>
+				<span>›</span>
+				<span><?php the_title(); ?></span>
 			</div>
 		</div>
 
-		<section class="gallery">
-			<div class="container">
-				<?php if( have_rows('gallery') ): ?>
-					<div class="gallery__slider swiper-container">
-						<div class="swiper-wrapper">
-
-							<?php while( have_rows('gallery') ): the_row(); 
-								$img = get_sub_field('img');
-							?>
-								
-								<div class="gallery__slider_slide swiper-slide">
-									<img src="<?php echo $img; ?>" alt="">
-								</div>
-
-							<?php endwhile; ?>
-
-						</div>
-					</div>
-				<?php endif; ?>
-			</div>
-		</section>
-
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<section class="page--hero">
+				<div class="container">
+
+					<h2><?php the_field('title'); ?></h2>
+					<?php the_content(); ?>
+
+					
+					<div class="history__arrow">
+						<div class="gallery__prev swiper-button-prev">Назад</div>
+						<div class="gallery__next swiper-button-next">Далі</div>
+						<span></span>
+					</div>
+					<?php if( have_rows('gallery') ): ?>
+						<div class="gallery__slider swiper-container">
+							<div class="swiper-wrapper">
+
+								<?php while( have_rows('gallery') ): the_row(); 
+									$img = get_sub_field('img');
+								?>
+									
+									<div class="gallery__slider_slide swiper-slide">
+										<img src="<?php echo $img; ?>" alt="">
+									</div>
+
+								<?php endwhile; ?>
+
+							</div>
+						</div>
+					<?php endif; ?>
+
+				</div>
+			</section>
+
 			<section class="page--post">
 				<div class="container">
+					<?php the_field('video'); ?>
 						
-					<h2><?php the_title(); ?></h2>
-
 					<?php if( have_rows('file') ): ?>
 						<div class="page--post__btn">
 							<?php while( have_rows('file') ): the_row(); 
@@ -53,11 +65,9 @@
 							<?php endwhile; ?>
 						</div>
 					<?php endif; ?>
-
-					<?php the_content(); ?>
-
 				</div>
 			</section>
+
 		<?php endwhile; ?>
 		<?php endif; ?>
 
@@ -79,7 +89,7 @@
 						<section class="page--form">
 							<div class="container">
 
-								<h3><b><span>Анкета</span></b> Волонтера МБФ <b>«Orphan Education Club»</b></h3>
+								<h3><b><span>Анкета</span></b> Волонтера БФ <b>«Orphan Education Club»</b></h3>
 
 								<div class="page--form__form">
 									<?php echo $form; ?>
