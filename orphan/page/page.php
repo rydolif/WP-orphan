@@ -41,6 +41,10 @@
 						<input type="text" name="price" placeholder="100" required>
 					</div>
 					<div class="payment__liqpay_line">
+						<input type="checkbox" id="remember" name="checkbox" required>
+						<label for="remember" class="checkbox">Я погоджуюсь з тим, що перераховуючи кошти за адресним призначенням платежу моє пожертвування повністю або частково може буде використано на інші статутні цілі в разі, якщо використання даних коштів за призначенням неможливо, в зв’язку з відміною проекту,  і поверненню не підлягає.</label>
+					</div>
+					<div class="payment__liqpay_line">
 						<input type="submit" class="btn">
 					</div>
 				</form>

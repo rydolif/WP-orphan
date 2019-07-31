@@ -251,6 +251,21 @@
 		margin-right: 65px
 		float: left
 
+	&__list
+		display: flex
+		justify-content: space-around
+		padding-top: 30px
+
+	&__item
+		color: $text
+		text-align: center
+
+		&:hover,
+		&:focus
+			color: $text
+			text-decoration: underline
+
+
 
 .payment
 	padding: 60px 0
@@ -1462,6 +1477,24 @@
 
 		input
 			width: 100%
+
+
+.payment__liqpay_line
+	display: flex
+	
+	label.checkbox
+		position: relative
+		margin-left: 20px
+		color: $text
+		cursor: pointer
+		margin-bottom: 0
+		margin-right: 0
+		font-size: 12px
+		max-width: 85%
+
+	#remember
+		width: 20px
+		height: 20px
 
 
 

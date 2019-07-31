@@ -16,6 +16,7 @@ $(function() {
         tel: "Введіть Ваш телефон",
         mail: "Введіть Вашу пошту",
         price: "Введіть суму",
+        checkbox: "Підтвердіть згоду з умовами",
       },
       submitHandler: function(form) {
         var t = {
@@ -23,6 +24,7 @@ $(function() {
           tel: jQuery('.payment__liqpay-' + index).find("input[name=tel]").val(),
           mail: jQuery('.payment__liqpay-' + index).find("input[name=mail]").val(),
           price: jQuery('.payment__liqpay-' + index).find("input[name=price]").val(),
+          checkbox: jQuery('.payment__liqpay-' + index).find("input[name=checkbox]").val(),
           subject: jQuery('.payment__liqpay-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.payment__liqpay-' + index, t);

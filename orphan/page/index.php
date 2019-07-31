@@ -53,6 +53,19 @@
 				</p>
 
 			</div>
+
+			<div class="container">
+				<div class="content__list">
+					<a href="http://www.orphan-club.com/wp-content/uploads/2019/07/статут.pdf" class="content__item" target="_blank">
+						<img src="https://img.icons8.com/wired/64/000000/pdf.png">
+						<h3>Статут</h3>
+					</a>
+					<a href="http://www.orphan-club.com/wp-content/uploads/2019/07/Виписка-з-єдиного-держоеєстру-1.pdf" class="content__item" target="_blank">
+						<img src="https://img.icons8.com/wired/64/000000/pdf.png">
+						<h3>Виписка з єдиного <br>держреєстру</h3>
+					</a>
+				</div>
+			</div>
 		</section>
 
 		<section class="mision" id="mision">
@@ -188,7 +201,7 @@
 									</div>
 									<!-- <p><b>Реквізити <?php the_field('requisite'); ?></b></p> -->
 									<p>Цінуємо кожного!</p>
-									<a href="#" class="btn <?php the_field('id'); ?>_open">Вартість проекту</a>
+									<a href="#" class="btn <?php the_field('id'); ?>_open">Перелік</a>
 								</div>
 								<div class="sos__info">
 									<div class="sos__info_img">
@@ -210,7 +223,7 @@
 									<span></span>
 								</button>
 
-								<h2><b>Вартість</b> <span>проекту</span></h2>
+								<h2><b>Перелік</b></h2>
 
 								<table>
 									<?php if( have_rows('list') ): ?>
