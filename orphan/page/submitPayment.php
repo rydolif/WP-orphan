@@ -18,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require("LiqPay.php"); // Підключаємо бібліотеку LiqPay.
     
     // Ключики. Не забудьте помінять на дані замовників !!!
-    $public_key = 'i71382271416';
-    $private_key = 'YEtoNIyeVMMSzSBo2w3gifM2hbyeEMuII1o5TU3C';
+    $public_key = 'i96440872509';
+    $private_key = 'Vg0f9IXxUaTSAL8cDhiH8X88emOOINj8pGVdVYlr';
 
     // В $_POST є всі дані з форми, я запхав їх в опис платіжки.
     // Не знаю, чи це потрібно. Можете ці дані собі зберігати.
