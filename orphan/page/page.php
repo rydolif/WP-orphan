@@ -42,7 +42,10 @@
 						<label for="remember" class="checkbox">Я погоджуюсь з тим, що перераховуючи кошти за адресним призначенням платежу моє пожертвування повністю або частково може буде використано на інші статутні цілі в разі, якщо використання даних коштів за призначенням неможливо, в зв’язку з відміною проекту,  і поверненню не підлягає.</label>
 					</div>
 					<div class="payment__liqpay_line">
-						<a href="<?php echo get_template_directory_uri(); ?>/assets/policy.pdf" target="_blank">Подтверждая заказ, я принимаю условия пользовательского соглашения</a>
+						<input type="checkbox" id="remember1" name="checkbox2" required>
+						<label for="remember1" class="checkbox">
+							<a href="<?php echo get_template_directory_uri(); ?>/assets/policy.pdf" target="_blank">Приймаю умови Політики конфіденційності</a>
+						</label>
 					</div>
 					<div class="payment__liqpay_line">
 						<input type="submit" class="btn">

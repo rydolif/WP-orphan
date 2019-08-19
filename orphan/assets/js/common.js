@@ -17,6 +17,7 @@ $(function() {
         mail: "Введіть Вашу пошту",
         price: "Введіть суму",
         checkbox: "Підтвердіть згоду з умовами",
+        checkbox2: "Підтвердіть Політику",
       },
       submitHandler: function(form) {
         var t = {
@@ -25,6 +26,7 @@ $(function() {
           mail: jQuery('.payment__liqpay-' + index).find("input[name=mail]").val(),
           price: jQuery('.payment__liqpay-' + index).find("input[name=price]").val(),
           checkbox: jQuery('.payment__liqpay-' + index).find("input[name=checkbox]").val(),
+          checkbox2: jQuery('.payment__liqpay-' + index).find("input[name=checkbox2]").val(),
           subject: jQuery('.payment__liqpay-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.payment__liqpay-' + index, t);
